@@ -7,15 +7,8 @@
 
 import { expectAssignable } from "tsd";
 
+import { Container, ContainerInterface } from "./container";
 import { Configuration, ConfigurationInterface } from "./configuration";
 
-/*
-|--------------------------------------------------------------------------
-| configuration
-|--------------------------------------------------------------------------
-|
-| These tests ensures the API of the configuration package.
-|
-*/
-
 expectAssignable<ConfigurationInterface>(new Configuration());
+expectAssignable<ContainerInterface>(new Container());

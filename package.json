@@ -25,9 +25,13 @@
     },
     "type": "module",
     "exports": {
+        "./container": "./lib/container.js",
         "./configuration": "./lib/configuration.js"
     },
+    "types": "index.d.ts",
     "files": [
+        "index.d.ts",
+        "container.d.ts",
         "configuration.d.ts",
         "lib/"
     ],
@@ -38,7 +42,8 @@
         "node": ">=14.5"
     },
     "dependencies": {
-        "@moonwalkingbits/apollo-configuration": "~0.1"
+        "@moonwalkingbits/apollo-configuration": "~0.1",
+        "@moonwalkingbits/apollo-container": "~0.1"
     },
     "devDependencies": {
         "tsd": "~0.13"
