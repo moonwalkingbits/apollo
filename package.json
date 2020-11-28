@@ -28,12 +28,19 @@
         "./configuration": "./lib/configuration.js"
     },
     "files": [
+        "configuration.d.ts",
         "lib/"
     ],
+    "scripts": {
+        "test:typescript": "tsd"
+    },
     "engines": {
         "node": ">=14.5"
     },
     "dependencies": {
         "@moonwalkingbits/apollo-configuration": "~0.1"
+    },
+    "devDependencies": {
+        "tsd": "~0.13"
     }
 }
