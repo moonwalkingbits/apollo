@@ -26,13 +26,15 @@
     "type": "module",
     "exports": {
         "./container": "./lib/container.js",
-        "./configuration": "./lib/configuration.js"
+        "./configuration": "./lib/configuration.js",
+        "./log": "./lib/log.js"
     },
     "types": "index.d.ts",
     "files": [
         "index.d.ts",
         "container.d.ts",
         "configuration.d.ts",
+        "log.d.ts",
         "lib/"
     ],
     "scripts": {
@@ -43,7 +45,8 @@
     },
     "dependencies": {
         "@moonwalkingbits/apollo-configuration": "~0.1",
-        "@moonwalkingbits/apollo-container": "~0.1"
+        "@moonwalkingbits/apollo-container": "~0.1",
+        "@moonwalkingbits/apollo-log": "~0.1"
     },
     "devDependencies": {
         "tsd": "~0.13"
