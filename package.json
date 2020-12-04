@@ -26,6 +26,7 @@
     },
     "type": "module",
     "exports": {
+        ".": "./index.js",
         "./application/http/middleware": "./lib/application/http/middleware/index.js",
         "./container": "./lib/container.js",
         "./configuration": "./lib/configuration.js",
