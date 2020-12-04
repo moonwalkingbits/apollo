@@ -26,11 +26,13 @@
     },
     "type": "module",
     "exports": {
+        "./application/http/middleware": "./lib/application/http/middleware/index.js",
         "./container": "./lib/container.js",
         "./configuration": "./lib/configuration.js",
         "./http": "./lib/http.js",
         "./log": "./lib/log.js",
-        "./server": "./lib/server.js"
+        "./server": "./lib/server.js",
+        "./service-providers": "./lib/service-providers/index.js"
     },
     "types": "index.d.ts",
     "files": [
