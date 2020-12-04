@@ -8,6 +8,7 @@
         "apollo",
         "framework",
         "web",
+        "server",
         "rest",
         "restful",
         "router",
@@ -28,7 +29,8 @@
         "./container": "./lib/container.js",
         "./configuration": "./lib/configuration.js",
         "./http": "./lib/http.js",
-        "./log": "./lib/log.js"
+        "./log": "./lib/log.js",
+        "./server": "./lib/server.js"
     },
     "types": "index.d.ts",
     "files": [
@@ -37,6 +39,7 @@
         "configuration.d.ts",
         "log.d.ts",
         "http.d.ts",
+        "server.d.ts",
         "lib/"
     ],
     "scripts": {
@@ -48,10 +51,12 @@
     "dependencies": {
         "@moonwalkingbits/apollo-configuration": "~0.1",
         "@moonwalkingbits/apollo-container": "~0.1",
-        "@moonwalkingbits/apollo-http": "^0.1.0",
-        "@moonwalkingbits/apollo-log": "~0.1"
+        "@moonwalkingbits/apollo-http": "~0.1",
+        "@moonwalkingbits/apollo-log": "~0.1",
+        "@moonwalkingbits/apollo-server": "~0.1"
     },
     "devDependencies": {
+        "@types/node": "~14.14",
         "tsd": "~0.13"
     }
 }
