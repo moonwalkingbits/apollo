@@ -27,24 +27,26 @@
     "type": "module",
     "exports": {
         ".": "./index.js",
-        "./application/http/middleware": "./lib/application/http/middleware/index.js",
-        "./container": "./lib/container.js",
         "./configuration": "./lib/configuration.js",
+        "./container": "./lib/container.js",
         "./http": "./lib/http.js",
         "./log": "./lib/log.js",
+        "./middleware": "./lib/middleware/index.js",
+        "./routing": "./lib/routing/index.js",
         "./server": "./lib/server.js",
         "./service-providers": "./lib/service-providers/index.js"
     },
     "types": "index.d.ts",
     "files": [
-        "index.js",
-        "index.d.ts",
-        "container.d.ts",
+        "lib/",
         "configuration.d.ts",
-        "log.d.ts",
+        "container.d.ts",
         "http.d.ts",
-        "server.d.ts",
-        "lib/"
+        "index.d.ts",
+        "index.js",
+        "log.d.ts",
+        "routing.d.ts",
+        "server.d.ts"
     ],
     "scripts": {
         "test:typescript": "tsd"

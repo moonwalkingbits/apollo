@@ -7,12 +7,25 @@
 
 import { expectAssignable } from "tsd";
 
-import { Container, ContainerInterface } from "./container";
 import { Configuration, ConfigurationInterface } from "./configuration";
+import { Container, ContainerInterface } from "./container";
 import { LogHandlerInterface, Logger } from "./log";
-import { UrlFactoryInterface, UrlFactory } from "./http";
+import { RequestMethod, ResponseInterface, UrlFactoryInterface, UrlFactory } from "./http";
 import { ServerBuilderInterface, ServerBuilder, StartupInterface } from "./server";
-import { Startup } from ".";
+import { AbstractController, Startup } from ".";
+import {
+    CONNECT,
+    DELETE,
+    GET,
+    HEAD,
+    OPTIONS,
+    PATCH,
+    POST,
+    PUT,
+    TRACE,
+    request,
+    route
+} from "./routing";
 
 expectAssignable<ConfigurationInterface>(new Configuration());
 expectAssignable<ContainerInterface>(new Container());
@@ -22,4 +35,20 @@ expectAssignable<ServerBuilderInterface>(new ServerBuilder());
 
 const startup = new Startup(new Configuration());
 expectAssignable<StartupInterface>(startup);
-await startup.configure(new Container());
+
+@route("/")
+class Controller extends AbstractController {
+    @CONNECT("/path")
+    @DELETE()
+    @GET()
+    @HEAD()
+    @OPTIONS()
+    @PATCH()
+    @POST()
+    @PUT()
+    @TRACE()
+    @request(RequestMethod.GET, "/path")
+    public async action(): Promise<ResponseInterface> {
+        return this.noContent();
+    }
+}

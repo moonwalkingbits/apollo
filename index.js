@@ -5,4 +5,5 @@
  * file that was distributed with this source code.
  */
 
+export { default as AbstractController } from "./lib/AbstractController.js";
 export { default as Startup } from "./lib/Startup.js";
