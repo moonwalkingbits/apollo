@@ -82,7 +82,7 @@ declare abstract class AbstractController {
      * @param statusCode HTTP response status.
      * @return Error response.
      */
-    protected error(message: string, statusCode: ResponseStatus): Promise<ResponseInterface>;
+    protected error(message: string, statusCode?: ResponseStatus): Promise<ResponseInterface>;
 
     /**
      * Return a text response.
