@@ -66,14 +66,14 @@ declare abstract class AbstractController {
      *
      * @return Empty response.
      */
-    protected noContent(): Promise<ResponseInterface>;
+    protected noContent(): ResponseInterface;
 
     /**
      * Return a not found response.
      *
      * @return Not found response.
      */
-    protected notFound(): Promise<ResponseInterface>;
+    protected notFound(): ResponseInterface;
 
     /**
      * Return an error response.
@@ -82,23 +82,25 @@ declare abstract class AbstractController {
      * @param statusCode HTTP response status.
      * @return Error response.
      */
-    protected error(message: string, statusCode?: ResponseStatus): Promise<ResponseInterface>;
+    protected error(message: string, statusCode?: ResponseStatus): ResponseInterface;
 
     /**
      * Return a text response.
      *
      * @param message Response message.
+     * @param statusCode HTTP response status.
      * @return Text response.
      */
-    protected text(message: string): Promise<ResponseInterface>;
+    protected text(message: string, statusCode?: ResponseStatus): ResponseInterface;
 
     /**
      * Return a JSON response.
      *
      * @param content Response content.
+     * @param statusCode HTTP response status.
      * @return JSON response.
      */
-    protected json(content: Object): Promise<ResponseInterface>;
+    protected json(content: Object, statusCode?: ResponseStatus): ResponseInterface;
 
     /**
      * Return a created response.
@@ -106,15 +108,16 @@ declare abstract class AbstractController {
      * @param location Entity location.
      * @return Created response.
      */
-    protected created(location: string): Promise<ResponseInterface>;
+    protected created(location: string): ResponseInterface;
 
     /**
      * Return a redirect response.
      *
      * @param location Redirect location.
+     * @param statusCode HTTP response status.
      * @return Redirect response.
      */
-    protected redirect(location: string): Promise<ResponseInterface>;
+    protected redirect(location: string, statusCode?: ResponseStatus): ResponseInterface;
 }
 
 export { AbstractController, Startup };
