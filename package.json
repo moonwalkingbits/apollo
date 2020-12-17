@@ -34,7 +34,8 @@
         "./middleware": "./lib/middleware/index.js",
         "./routing": "./lib/routing/index.js",
         "./server": "./lib/server.js",
-        "./service-providers": "./lib/service-providers/index.js"
+        "./service-providers": "./lib/service-providers/index.js",
+        "./validation": "./lib/validation.js"
     },
     "types": "index.d.ts",
     "files": [
@@ -46,7 +47,8 @@
         "index.js",
         "log.d.ts",
         "routing.d.ts",
-        "server.d.ts"
+        "server.d.ts",
+        "validation.d.ts"
     ],
     "scripts": {
         "test:typescript": "tsd"
@@ -59,7 +61,8 @@
         "@moonwalkingbits/apollo-container": "~0.1",
         "@moonwalkingbits/apollo-http": "~0.1",
         "@moonwalkingbits/apollo-log": "~0.1",
-        "@moonwalkingbits/apollo-server": "~0.1"
+        "@moonwalkingbits/apollo-server": "~0.1",
+        "@moonwalkingbits/apollo-validation": "~0.1"
     },
     "devDependencies": {
         "@types/node": "~14.14",

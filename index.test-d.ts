@@ -5,13 +5,14 @@
  * file that was distributed with this source code.
  */
 
-import { expectAssignable } from "tsd";
+import { expectAssignable, expectType } from "tsd";
 
 import { Configuration, ConfigurationInterface } from "./configuration";
 import { Container, ContainerInterface } from "./container";
 import { LogHandlerInterface, Logger } from "./log";
 import { RequestMethod, ResponseInterface, UrlFactoryInterface, UrlFactory } from "./http";
 import { ServerBuilderInterface, ServerBuilder, StartupInterface } from "./server";
+import { ValidatorFactory } from "./validation";
 import { AbstractController, Startup } from ".";
 import {
     CONNECT,
@@ -32,6 +33,7 @@ expectAssignable<ContainerInterface>(new Container());
 expectAssignable<LogHandlerInterface>(new Logger([]));
 expectAssignable<UrlFactoryInterface>(new UrlFactory());
 expectAssignable<ServerBuilderInterface>(new ServerBuilder());
+expectType<ValidatorFactory>(new ValidatorFactory());
 
 const startup = new Startup(new Configuration());
 expectAssignable<StartupInterface>(startup);
