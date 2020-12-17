@@ -1,6 +1,6 @@
 {
     "name": "@moonwalkingbits/apollo",
-    "version": "0.4.1",
+    "version": "0.5.0",
     "description": "The Apollo project is an effort to bring stability to Node.js projects at scale.",
     "author": "Martin Pettersson <martin@moonwalkingbits.com>",
     "license": "MIT",
