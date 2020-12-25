@@ -59,9 +59,9 @@
     "dependencies": {
         "@moonwalkingbits/apollo-configuration": "~0.2",
         "@moonwalkingbits/apollo-container": "~0.1",
-        "@moonwalkingbits/apollo-http": "~0.1",
+        "@moonwalkingbits/apollo-http": "~0.2",
         "@moonwalkingbits/apollo-log": "~0.1",
-        "@moonwalkingbits/apollo-server": "~0.1",
+        "@moonwalkingbits/apollo-server": "~0.2",
         "@moonwalkingbits/apollo-validation": "~0.1"
     },
     "devDependencies": {
