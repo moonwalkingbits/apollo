@@ -29,6 +29,7 @@ declare class Route {
     public pattern: RegExp | string;
     public action: Function;
     public constructor(method: RequestMethod, pattern: RegExp | string, action: Function);
+    public matches(request: RequestInterface): boolean;
 }
 
 declare class Router {
