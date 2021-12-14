@@ -26,9 +26,9 @@ declare function CONNECT(pattern?: string): Function;
 
 declare class Route {
     public method: RequestMethod;
-    public pattern: RegExp | string;
+    public pattern: RegExp;
     public action: Function;
-    public constructor(method: RequestMethod, pattern: RegExp | string, action: Function);
+    public constructor(method: RequestMethod, pattern: RegExp, action: Function);
     public matches(request: RequestInterface): boolean;
 }
 
